@@ -3,95 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EVAT Project Showcase</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>EVAT Use Case Showcase</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
+      background-color: #f9f9f9;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
     }
     .hero {
-      background: linear-gradient(45deg, #004d40, #00796b);
+      background: linear-gradient(90deg, #00695c, #26a69a);
       color: white;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
       text-align: center;
     }
     .section {
-      padding: 2rem 1rem;
+      padding: 2rem 0;
     }
-    .student-links li {
-      padding: 0.3rem 0;
+    .use-case-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .student-links a {
-      color: #00796b;
-      font-weight: 500;
-    }
-    .student-links a:hover {
-      text-decoration: underline;
+    .use-case-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     .search-box {
-      margin-bottom: 1rem;
+      margin: 2rem auto;
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Electric_car_icon.png" alt="EV Logo" width="60">
-    <h1 class="mt-3">Electric Vehicle Adoption Tools (EVAT)</h1>
-    <p>Accelerating Australia's EV Future through AI, ML & Smart Applications</p>
+    <div class="container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Electric_car_icon.png" width="80" alt="EV Logo">
+      <h1 class="display-5 fw-bold mt-3">Electric Vehicle Adoption Tools (EVAT)</h1>
+      <p class="lead">Empowering Australia's EV journey through AI, Machine Learning, and Smart App Development</p>
+    </div>
   </div>
 
   <div class="container section">
-    <h2>About the Project</h2>
-    <p>The EV Adoption Tools project is dedicated to promoting the adoption of Electric Vehicles (EVs) in Australia. By building smart tools and leveraging data science, the EVAT team aims to enhance user experience, improve infrastructure planning, and make EV usage more practical and appealing.</p>
+    <h2 class="mb-4">Project Summary</h2>
+    <p>The EVAT project is a comprehensive initiative aimed at accelerating electric vehicle adoption across Australia by bridging technology, infrastructure, and user-centric innovation. Through collaborative efforts between the Data Science and App Development teams, EVAT delivers predictive models, intelligent routing, blackspot detection, and an intuitive mobile application—all designed to make EV ownership smarter and more accessible.</p>
 
-    <h2>Trimester T1 2025 Goals</h2>
-    <ul>
-      <li>Develop App MVP with intuitive navigation & filters</li>
-      <li>Predict charger availability using AI (ARIMA, LSTM, XGBoost)</li>
-      <li>Identify blackspots using clustering models (DBSCAN, KMeans)</li>
-      <li>Enable real-time infrastructure monitoring with Power BI</li>
-      <li>Build AI-powered chatbot for smart recommendations</li>
-    </ul>
+    <h2 class="mt-5">Key Use Cases</h2>
+    <div class="search-box">
+      <input type="text" class="form-control form-control-lg" placeholder="Search use cases..." id="searchInput">
+    </div>
 
-    <h2>Deliverables Overview</h2>
-    <ul>
-      <li>Interactive charger locator & booking system</li>
-      <li>Forecasting APIs deployed with Flask & MongoDB</li>
-      <li>Interactive dashboards with real-time insights</li>
-      <li>NLP-based AI Chatbot integrated with app</li>
-    </ul>
-
-    <h2>Student Contributions</h2>
-    <input type="text" class="form-control search-box" placeholder="Search student name..." id="searchInput">
-    <ul class="list-group student-links" id="studentList">
-      <li class="list-group-item"><a href="#">Goutham Krishna Bala Murali Krishna</a></li>
-      <li class="list-group-item"><a href="#">Saad Ikram Cheema</a></li>
-      <li class="list-group-item"><a href="#">Alexander John Reid</a></li>
-      <li class="list-group-item"><a href="#">Sehar Aejaz</a></li>
-      <li class="list-group-item"><a href="#">Aakhya Saxena</a></li>
-      <li class="list-group-item"><a href="#">Ajay Rajesh</a></li>
-      <li class="list-group-item"><a href="#">Barani Shanmugasundaram</a></li>
-      <li class="list-group-item"><a href="#">Dip Nomani</a></li>
-      <li class="list-group-item"><a href="#">Ebi Benny</a></li>
-      <li class="list-group-item"><a href="#">Hann Xiang Soo</a></li>
-      <li class="list-group-item"><a href="#">Harold Parappillil Sunny</a></li>
-      <li class="list-group-item"><a href="#">Mihir Arvindbhai Dobariya</a></li>
-      <li class="list-group-item"><a href="#">Nirmal Antony Mariadoss</a></li>
-      <li class="list-group-item"><a href="#">Nouman Ali</a></li>
-      <li class="list-group-item"><a href="#">Rose Mary Joy</a></li>
-      <li class="list-group-item"><a href="#">Suraj Radhakrishnan Nair</a></li>
-      <li class="list-group-item"><a href="#">Yori Zhuang</a></li>
-    </ul>
+    <div class="row" id="useCaseGrid">
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">Blackspot Predictions</h5>
+            <p class="card-text">Identifying underserved areas using DBSCAN and KMeans clustering algorithms to optimize charger placement.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">Charger Availability Forecasting</h5>
+            <p class="card-text">Time-series modeling (ARIMA, LSTM, XGBoost) to predict charger demand based on time, weather, and location.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">Environmental Impact Analysis</h5>
+            <p class="card-text">Assessing CO₂ emission reductions and sustainability trends through EV infrastructure growth.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">Sentiment Analysis of EV Feedback</h5>
+            <p class="card-text">Analyzing social media and review data to understand user attitudes and satisfaction trends.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">EV Usage Pattern Analysis</h5>
+            <p class="card-text">Discovering user behavior patterns from location, time, and charger types to improve app recommendations.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 use-case">
+        <div class="card use-case-card">
+          <div class="card-body">
+            <h5 class="card-title">Power BI Infrastructure Dashboards</h5>
+            <p class="card-text">Interactive, real-time dashboards for charger usage, congestion, adoption trends, and planning.</p>
+            <a href="#" class="btn btn-outline-success btn-sm">View Use Case</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script>
-    document.getElementById("searchInput").addEventListener("keyup", function() {
-      let filter = this.value.toLowerCase();
-      let items = document.querySelectorAll("#studentList li");
-      items.forEach(item => {
-        let name = item.textContent.toLowerCase();
-        item.style.display = name.includes(filter) ? "" : "none";
+    document.getElementById("searchInput").addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const useCases = document.querySelectorAll(".use-case");
+      useCases.forEach((card) => {
+        const title = card.querySelector(".card-title").textContent.toLowerCase();
+        const desc = card.querySelector(".card-text").textContent.toLowerCase();
+        card.style.display = title.includes(filter) || desc.includes(filter) ? "block" : "none";
       });
     });
   </script>
